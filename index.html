@@ -1,0 +1,178 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSTutorBench – AI‑Based CS Tutoring Benchmark</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ===== Navbar ===== -->
+    <header>
+      <nav class="wrapper nav">
+        <span class="brand">CSTutorBench</span>
+
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+          ☰
+        </button>
+
+        <ul id="nav-menu" class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#dataset">Dataset</a></li>
+          <li><a href="#evaluation">Evaluation</a></li>
+          <li><a href="#leaderboard">Leaderboard</a></li>
+          <li><a href="https://unsw-my.sharepoint.com/:u:/g/personal/z5030786_ad_unsw_edu_au/EdYgl-UAIeBCl_ZAycleE1wBXRczvQ9RXmSZ6ES3OGvn6Q?e=cClTVx" target="_blank" rel="noopener noreferrer">Download</a></li>
+          <li><a href="#paper">Paper</a></li>
+          <li><a href="https://zekai1122.github.io/cstutor-ans-gen-project/" target="_blank" rel="noopener noreferrer">Demo</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="wrapper hero-inner">
+        <h1>CSTutorBench</h1>
+        <p class="tagline">
+          Benchmarking Large Language Models for Realistic<br />
+          Computer Science Tutoring
+        </p>
+        <p class="subtitle">[NeurIPS 2025]</p>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="https://unsw-my.sharepoint.com/:u:/g/personal/z5030786_ad_unsw_edu_au/EdYgl-UAIeBCl_ZAycleE1wBXRczvQ9RXmSZ6ES3OGvn6Q?e=cClTVx" target="_blank" rel="noopener noreferrer">Get Dataset</a>
+          <a class="btn btn-outline" href="#paper">Read Paper</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section wrapper">
+      <h2>About CSTutorBench</h2>
+      <p>CSTutorBench is a benchmark designed to evaluate the instructional capabilities of large language models (LLMs) in real-world computer science tutoring scenarios. Built on authentic student–tutor interactions from a foundational university CS course, CSTutorBench captures the complexity of student inquiries and provides rich contextual materials such as project specifications and screenshots.</p>
+      <p>Unlike conventional benchmarks that focus narrowly on coding accuracy or generation tasks, CSTutorBench emphasizes pedagogical alignment—assessing how well AI tutors approximate effective human teaching in terms of correctness, clarity, engagement, and more.</p>
+    </section>
+
+    <!-- Dataset Section -->
+    <section id="dataset" class="alt-full-yellow">
+      <div class="wrapper">
+        <h2>Dataset</h2>
+        <p>
+          CSTutorBench includes <strong>2,970</strong> high-quality student questions from a real CS course, each with:
+        </p>
+        <ul>
+          <li>Course context (e.g., syllabus, assignment specs)</li>
+          <li>Student’s question (text and/or screenshot)</li>
+          <li>Human tutor’s response (gold reference)</li>
+          <li>AI-generated response (from various LLMs)</li>
+        </ul>
+        <p>The questions span diverse educational intents:</p>
+        <ul>
+          <li>Conceptual understanding</li>
+          <li>Code debugging</li>
+          <li>Clarification on project specifications</li>
+          <li>Administrative help</li>
+          <li>Meta-cognitive strategies</li>
+        </ul>
+        <p>
+          We also provide detailed annotations and dimension-level scores for evaluation and model training.
+        </p>
+      </div>
+    </section>
+
+    <!-- Evaluation Section -->
+    <section id="evaluation" class="section wrapper">
+      <h2>Evaluation Framework</h2>
+      <p>
+        CSTutorBench introduces a five-dimensional evaluation rubric tailored for educational quality:
+      </p>
+      <ol>
+        <li><strong>Accuracy</strong>: Factual correctness and coverage</li>
+        <li><strong>Clarity</strong>: Coherence and logical structure</li>
+        <li><strong>Conciseness</strong>: Focus without redundancy</li>
+        <li><strong>Personalization</strong>: Relevance to the student’s context</li>
+        <li><strong>Engagement</strong>: Scaffolding and encouragement of active thinking</li>
+      </ol>
+      <p>
+        Each response is scored from 1–5 per dimension, using a rubric that treats the human tutor’s reply as a high-quality reference (not a rigid ground truth).
+        The scoring prompt is designed to reward educational value, even if the AI diverges in approach.
+      </p>
+      <p>
+        See <a href="#" target="_blank" rel="noopener noreferrer">Appendix A in our paper</a> for the full scoring prompt.
+      </p>
+    </section>
+
+    <!-- Leaderboard Section -->
+<section id="leaderboard" class="alt-full-blue">
+  <div class="wrapper">
+    <h2>Baseline Results / Leaderboard</h2>
+    <p>
+      We evaluated multiple state-of-the-art LLMs using our five-dimensional rubric. The results show meaningful differences across models in how well they align with effective teaching strategies.
+    </p>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Accuracy</th>
+            <th>Clarity</th>
+            <th>Conciseness</th>
+            <th>Personalization</th>
+            <th>Engagement</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GPT-4</td>
+            <td>4.5</td>
+            <td>4.6</td>
+            <td>4.3</td>
+            <td>4.2</td>
+            <td>4.4</td>
+            <td><strong>4.4</strong></td>
+          </tr>
+          <tr>
+            <td>Claude 3</td>
+            <td>4.3</td>
+            <td>4.4</td>
+            <td>4.1</td>
+            <td>4.0</td>
+            <td>4.1</td>
+            <td><strong>4.2</strong></td>
+          </tr>
+          <tr>
+            <td>ChatGPT-3.5</td>
+            <td>3.8</td>
+            <td>4.0</td>
+            <td>4.1</td>
+            <td>3.5</td>
+            <td>3.2</td>
+            <td><strong>3.7</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Future updates will allow community submissions.
+    </p>
+  </div>
+</section>
+
+
+
+    <!-- ===== Footer ===== -->
+    <footer>
+      <div class="wrapper">
+        © 2025 CSTutorBench • Built with ❤️ by UNSW CSE
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("nav-menu");
+      toggle.addEventListener("click", () => menu.classList.toggle("open"));
+    </script>
+  </body>
+</html>

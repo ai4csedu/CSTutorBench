@@ -5,13 +5,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSTutorBench – AI‑Based CS Tutoring Benchmark</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="/CSTutorBench/sections/hero/hero.css" />
-    <link rel="stylesheet" href="/CSTutorBench/sections/dataset/dataset.css" />
-    <link rel="stylesheet" href="/CSTutorBench/sections/leaderboard/leaderboard.css" />
-    <link rel="stylesheet" href="/CSTutorBench/sections/authors/authors.css" />
-    <link rel="stylesheet" href="/CSTutorBench/sections/contact/contact.css" />
-    <link rel="stylesheet" href="/CSTutorBench/sections/footer/footer.css" />
+    <script>
+      const isGitHubPages = location.hostname.includes("github.io");
+      const base = isGitHubPages ? "/CSTutorBench/" : "";
+
+      const styles = [
+        "style.css",
+        "sections/hero/hero.css",
+        "sections/dataset/dataset.css",
+        "sections/leaderboard/leaderboard.css",
+        "sections/authors/authors.css",
+        "sections/contact/contact.css",
+        "sections/footer/footer.css"
+      ];
+
+      styles.forEach(path => {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = base + path;
+        document.head.appendChild(link);
+      });
+    </script>
   </head>
 
   <body>
@@ -29,7 +43,7 @@
           <li><a href="#dataset">Dataset</a></li>
           <li><a href="#evaluation">Evaluation</a></li>
           <li><a href="#leaderboard">Leaderboard</a></li>
-          <li><a href="#contact">Download</a></li>
+          <li><a href="#download">Download</a></li>
           <li><a href="#paper">Paper</a></li>
           <li><a href="https://zekai1122.github.io/cstutor-ans-gen-project/" target="_blank" rel="noopener noreferrer">Demo</a></li>
         </ul>
@@ -51,6 +65,10 @@
       const menu = document.getElementById("nav-menu");
       toggle.addEventListener("click", () => menu.classList.toggle("open"));
     </script>
-    <script src="/CSTutorBench/scripts/inject-sections.js"></script>
+    <script>
+      const script = document.createElement("script");
+      script.src = base + "scripts/inject-sections.js";
+      document.body.appendChild(script);
+    </script>
   </body>
 </html>

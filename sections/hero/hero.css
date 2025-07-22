@@ -63,3 +63,15 @@
   background: #1e293b;
   color: #fff;
 }
+
+.btn-outline-reverse {
+  background: #1e293b;
+  color: #fff;
+  border: 2px solid #1e293b;
+}
+
+.btn-outline-reverse:hover {
+  background: #ffffff;
+  color: #1e293b;
+  border: 2px solid #1e293b;
+}

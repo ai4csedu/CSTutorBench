@@ -1,0 +1,49 @@
+.author-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.author {
+  text-align: center;
+}
+
+.author img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  transition: transform 0.2s;
+}
+
+.author img:hover {
+  transform: scale(1.05);
+}
+
+.author p {
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.author a {
+  color: #1e293b;
+  text-decoration: none;
+}
+
+.author a:hover {
+  text-decoration: underline;
+}
+
+.affiliations {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.affiliations p {
+  margin: 0.3rem 0;
+}

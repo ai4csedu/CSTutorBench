@@ -67,133 +67,14 @@ header {
   color: #000;
 }
 
-/* ---------- hero ---------- */
-.hero {
-  background: #f4f7fa;
-  padding: 5.5rem 0 4rem;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  margin: 0 0 1rem;
-  font-weight: 700;
-}
-
-.tagline {
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
-  margin: 0 0 0.5rem;
-}
-
-.subtitle {
-  margin-bottom: 2rem;
-  font-weight: 500;
-  color: #475569;
-}
-
-.actions {
-  display: flex;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* ---------- buttons ---------- */
-.btn {
-  display: inline-block;
-  padding: 0.9rem 2.4rem;
-  border-radius: 48px;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.25s ease;
-  white-space: nowrap;
-}
-
-.btn-primary {
-  background: #ffd600;
-  color: #000;
-}
-
-.btn-primary:hover {
-  background: #ffce00;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
-}
-
-.btn-outline {
-  background: #ffffff;
-  color: #1e293b;
-  border: 2px solid #1e293b;
-}
-
-.btn-outline:hover {
-  background: #1e293b;
-  color: #fff;
-}
-
 /* ---------- sections ---------- */
 .section {
-  padding: 4.5rem 1rem;
+  padding: 4.5rem 2.5rem 2rem;
 }
 
 h2 {
   font-size: 1.75rem;
   margin: 0 0 1rem;
-}
-
-/* 通栏淡灰背景 */
-.alt-full-yellow {
-  width: 100%;
-  background: #fefad9;
-  padding: 4.5rem 0;
-}
-
-.alt-full-blue {
-  width: 100%;
-  background: #e0f2fb;
-  padding: 4.5rem 0;
-}
-
-/* ---------- Table styles ---------- */
-.table-wrapper {
-  overflow-x: auto;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.95rem;
-  background: #ffffff;
-  box-shadow: 0 0 0 1px #e2e8f0;
-}
-
-th, td {
-  padding: 0.75rem 1rem;
-  text-align: center;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-thead {
-  background: #f4f7fa;
-  font-weight: 600;
-}
-
-tbody tr:last-child td {
-  border-bottom: none;
-}
-
-
-
-/* ---------- footer ---------- */
-footer {
-  background: #ffdc00;        /* deep grey */
-  color: #000;             /* near‑white text */
-  padding: 1rem 0;
-  font-size: 0.9rem;
-  text-align: center;
 }
 
 /* ---------- responsive ---------- */
@@ -214,6 +95,16 @@ footer {
 /* 追加或覆盖以下样式 */
 
 @media (max-width: 768px) {
+  /* ---------- hero ---------- */
+  .hero {
+    padding: 3rem 0 4rem;
+  }
+
+  /* ---------- section ---------- */
+  .section {
+    padding: 2rem 1rem;
+  }
+
   /* 让展开菜单覆盖整行并下沉 */
   .nav {
     position: relative;

@@ -1,0 +1,21 @@
+.contact-section a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+.contact-logos {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.contact-logos img {
+  height: 80px;
+  object-fit: contain;
+}

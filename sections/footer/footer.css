@@ -1,0 +1,8 @@
+/* ---------- footer ---------- */
+footer {
+  background: #ffdc00;        /* deep grey */
+  color: #000;             /* near‑white text */
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+}

@@ -1,0 +1,34 @@
+.alt-full-blue {
+  width: 100%;
+  background: #e0f2fb;
+}
+
+/* ---------- Table styles ---------- */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px #e2e8f0;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+thead {
+  background: #f4f7fa;
+  font-weight: 600;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}

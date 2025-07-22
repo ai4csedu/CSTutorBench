@@ -1,0 +1,65 @@
+/* ---------- hero ---------- */
+.hero {
+  background: #f4f7fa;
+  padding: 5.5rem 0 4rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin: 0 0 1rem;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  margin: 0 0 1rem;
+}
+
+.subtitle {
+  margin-bottom: 2rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.actions {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2.4rem;
+  border-radius: 48px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: #ffd600;
+  color: #000;
+  border: 2px solid transparent;
+}
+
+.btn-primary:hover {
+  background: #ffce00;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: #ffffff;
+  color: #1e293b;
+  border: 2px solid #1e293b;
+}
+
+.btn-outline:hover {
+  background: #1e293b;
+  color: #fff;
+}
